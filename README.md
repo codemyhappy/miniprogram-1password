@@ -32,6 +32,37 @@
 - 数据存储：云端加密存储
 - 版本控制：Git
 
+## 目录结构
+
+```
+.
+├── README.md
+├── cloudfunctions  (云函数目录=小程序后端接口)
+│   ├── bugManage   (问题反馈的云函数，对应数据库表bug_list)
+│   ├── psdRecordsManage （密码记录的云函数，对应数据库表psd_records）
+│   └── psdUserManage （用户信息的云函数，对应数据库表psd_users）
+├── database.d.ts (数据库表的详细定义文件)
+├── miniprogram  （微信小程序前端源码目录）
+│   ├── api.js  （所有用到的后端接口）
+│   ├── app.js
+│   ├── app.json
+│   ├── app.wxss
+│   ├── constant.js （常量定义文件）
+│   ├── env.example.js  （环境变量的示例文件，需改名为 env.js）
+│   ├── env.js  （正式环境的环境变量文件，此文件不在版本控制）
+│   ├── envList.js
+│   ├── images
+│   ├── miniprogram_npm （微信小程序npm依赖目录，加密库crypto-js）
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── pages （微信小程序页面目录）
+│   ├── sitemap.json
+│   └── utils.js （工具函数文件）
+├── project.config.json
+└── project.private.config.json
+```
+
 ## 安全性保障
 1. 加密机制：
    - 客户端AES-256加密,加密key是用户的主密码
@@ -51,6 +82,7 @@
    - 克隆项目仓库
    - 用微信开发者工具打开项目
    - 创建两张数据库表`psd_records`、`psd_users`
+   - 修改`env.example.js`为`env.js`，并配置为自己的环境信息
    - 构建运行查看效果
    - 使用微信开发者工具上传发布
 
