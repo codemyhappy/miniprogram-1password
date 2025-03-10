@@ -99,5 +99,8 @@
 ## 关注与支持
 如果本项目对你有帮助，欢迎：
 - 给项目点个 ⭐️
+- 将项目分享给更多需要的人
 - 关注我的小红书 [@要一直开心啊](https://www.xiaohongshu.com/user/profile/610e50bd00000000010088fd)
-- 分享给更多需要的人
+- 或者，请我喝杯咖啡
+
+![](./miniprogram/images/wx.jpeg){width=160px } ![](./miniprogram/images/zfb.jpeg){width=160px }
