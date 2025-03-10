@@ -103,4 +103,11 @@
 - 关注我的小红书 [@要一直开心啊](https://www.xiaohongshu.com/user/profile/610e50bd00000000010088fd)
 - 或者，请我喝杯咖啡
 
-![](./miniprogram/images/wx.jpeg){width=160px } ![](./miniprogram/images/zfb.jpeg){width=160px }
+<img src="./miniprogram/images/wx.jpeg" width=160 />
+<img src="./miniprogram/images/zfb.jpeg" width=160 />
+
+## 感谢/参考文档
+- [微信小程序开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html)
+- [微信小程序前端-开发指南](https://developers.weixin.qq.com/miniprogram/dev/framework/)
+- [微信小程序后端-云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloudservice/wxcloud/basis/getting-started.html)
+- [WeUI官方组件库](https://weui.io/)
