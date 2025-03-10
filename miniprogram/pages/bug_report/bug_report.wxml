@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="form-item">
+    <textarea 
+      class="textarea"
+      value="{{content}}"
+      placeholder="请输入遇到的问题（最多100字）"
+      maxlength="100"
+      bindinput="onInput"
+    />
+    <view class="word-count">{{content.length}}/100</view>
+  </view>
+  
+  <button 
+    class="submit-btn" 
+    bindtap="submitBug"
+    disabled="{{isSubmitting}}"
+  >
+    {{isSubmitting ? '提交中...' : '提交'}}
+  </button>
+</view>

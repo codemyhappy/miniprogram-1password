@@ -1,0 +1,172 @@
+/* pages/home/home.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.search-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  /* width: 100%; */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-list {
+  width: 100%;
+  height: calc(100vh - 180px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+.password-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.platform-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color:#fff;
+  line-height: 50px;
+  text-align: center;
+  word-break: break-all;
+  font-size: 12px;
+}
+
+.platform-info {
+  display: flex;
+  flex: 1;
+  gap: 6px;
+}
+
+.platform-name {
+  font-weight: bold;
+}
+
+.account-info {
+  color: #666;
+}
+
+.add-password-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 60px !important;
+  height: 60px;
+  line-height: 40px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 8px;
+}
+.tips-button{
+  background-color: rgb(209, 162, 162);
+  bottom: 100px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+}
+.modal-content .check-box{
+  margin-bottom: 40px;
+}
+
+.modal-content input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* home-tip 样式 */
+.home-tip {
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: 1;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background: rgba(184, 113, 113, 0.2) !important;
+  overflow-y: scroll;
+}
+.welcom{
+  font-size: 20px;
+  text-align: center;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.tip-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.tip-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+  padding-left: 14px;
+  border-left: 2px solid #007bff;
+}
+
+.home-tip view {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.home-tip view:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,119 @@
+<!-- 项目介绍页面 -->
+<view class="container">
+  <!-- 项目概述 -->
+  <view class="card">
+    <view class="card-header">
+      <image src="/images/icons/home-active.png" class="icon"></image>
+      <view class="section-title">项目概述</view>
+    </view>
+    <view class="divider"></view>
+    <text class="section-content" space="ensp">
+本项目是一个基于微信小程序的密码管理工具，主要功能包括：
+  - 安全的密码存储与管理
+  - 基于微信的多平台账号密码备份
+  - 主密码保护机制
+  - 客户端加密存储
+  - 问题反馈与技术支持
+
+本项目完全开源，开源的目的是打消大家对于安全性的疑虑。
+此项目也作为后续本人作为小程序教学的案例，需要学习做小程序的朋友，来小红书找<text style="color: rgb(153, 55, 55);" bind:tap="onCopyHomePage">@要一直开心啊</text>。
+
+项目开源地址： <text class="copy" bind:tap="onCopyGitUrl">点击前往-></text>
+    </text>
+  </view>
+
+  <!-- 核心功能 -->
+  <view class="card">
+    <view class="card-header">
+      <image src="/images/icons/goods-active.png" class="icon"></image>
+      <view class="section-title">核心功能</view>
+    </view>
+    <view class="divider"></view>
+    <text class="section-content" space="ensp">
+1. 密码管理：
+  - 添加/编辑/删除密码记录
+  - 密码搜索功能
+  - 密码复制功能
+2. 安全特性：
+  - AES-256加密存储
+  - 主密码验证机制
+  - 5天内免登录
+3. 用户支持：
+  - 问题反馈
+  - 技术支持
+  - 使用说明
+    </text>
+  </view>
+  <!-- 安全性保障 -->
+  <view class="card">
+    <view class="card-header">
+      <image src="/images/icons/usercenter-active.png" class="icon"></image>
+      <view class="section-title">安全性保障</view>
+    </view>
+    <view class="divider"></view>
+    <text class="section-content" space="ensp">
+1. 加密机制：
+  - 客户端AES-256加密,加密key是用户的主密码
+  - 主密码本地自行存储，不上云
+  - 加密数据存储，账号/密码/描述，全部加密后上云
+2. 安全建议：
+  - 不要泄露主密码
+  - 定期修改主密码
+  - 启用5天内免登录功能
+    </text>
+  </view>
+  <!-- 技术架构 -->
+  <view class="card">
+    <view class="card-header">
+      <image src="/images/icons/business-active.png" class="icon"></image>
+      <view class="section-title">技术架构</view>
+    </view>
+    <view class="divider"></view>
+    <text class="section-content" space="ensp">
+- 前端：微信小程序原生开发
+- 后端：微信云开发
+- 加密：CryptoJS包 AES-256 本地加密
+- 数据存储：云端加密存储
+- 版本控制：Git
+    </text>
+  </view>
+
+  <!-- 部署说明 -->
+  <view class="card">
+    <view class="card-header">
+      <image src="/images/icons/setting.svg" class="icon"></image>
+      <view class="section-title">部署说明</view>
+    </view>
+    <view class="divider"></view>
+    <text class="section-content" space="ensp">
+1. 环境要求：
+  - Node.js 16+
+  - 微信开发者工具
+  - 微信云开发环境
+2. 安装步骤：
+  - 克隆项目仓库
+  - 用微信开发者工具打开项目
+  - 创建两张数据库表`psd_records`、`psd_users`
+  - 构建运行查看效果
+  - 使用微信开发者工具上传发布
+    </text>
+  </view>
+
+
+
+  <!-- 贡献指南 -->
+  <view class="card">
+    <view class="card-header">
+      <image src="/images/icons/share.svg" class="icon"></image>
+      <view class="section-title">贡献指南</view>
+    </view>
+    <view class="divider"></view>
+    <text class="section-content" space="ensp">
+欢迎贡献代码，请遵循以下流程：
+1. Fork项目仓库
+2. 创建特性分支
+3. 提交Pull Request
+4. 通过代码审查后合并
+    </text>
+  </view>
+</view>

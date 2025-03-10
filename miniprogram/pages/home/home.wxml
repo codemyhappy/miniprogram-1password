@@ -1,0 +1,93 @@
+<!-- pages/home/home.wxml -->
+
+<!-- 加载中 -->
+<view wx:if="{{isIniting}}"> <mp-loading icon="loading" type="circle"></mp-loading></view>
+
+<!-- 主页的密码筛选页面 -->
+<block wx:if="{{!showTipPage && !isIniting}}">
+  <view class="container" wx:if="{{passwords.length>0}}">
+    <view class="search-container">
+      <input type="text" placeholder="搜索平台或账号" bindinput="onSearchInput" />
+    </view>
+    <scroll-view class="password-list" scroll-y>
+      <block wx:for="{{filteredPasswords}}" wx:key="_id" wx:for-item="item">
+        <view class="password-item" 
+          data-id="{{item._id}}" >
+          <!-- <image class="platform-icon" src="{{item.icon}}" /> -->
+          <view class="platform-icon">{{item.icon}}</view>
+          <view class="platform-info">
+            <text class="platform-name">{{item.platform}}</text>
+            <text class="account-info">账号：******</text>
+            <text class="account-info">密码：******</text>
+          </view>
+          <view class="item-action">
+            <mp-icon icon="pencil" bind:tap="navigateToAddPassword" data-id="{{item._id}}"  color="#fff" size="32" ty></mp-icon>
+            <mp-icon icon="copy" bind:tap="onCopy" data-item="{{item}}" color="#fff" size="32" ty></mp-icon>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="container"  wx:if="{{passwords.length===0}}">
+  您还未添加密码记录，点击右下角 ⊕ 按钮，开始管理你的密码吧
+  </view>
+</block>
+
+
+<!-- 当未添加密码时，给出提示 -->
+<view class="home-tip" wx:if="{{showTipPage}}">
+  <view class="welcom">欢迎来到一码控密码管理器</view>
+  <view class="tip-title"> 🔒 您的数字保险箱，安全+便捷=触手可及</view> 
+  <view class="tip-text"><text>我们采用军工级AES-256对称加密技术，实现<text style="font-weight: bold;">客户端加密→安全传输→云端存储</text>的全流程保护
+
+✓ 数据在设备内存完成可逆加密（需主密钥解密）
+✓ 云端仅存储加密态密文，脱离您设备的主密钥无法解密
+✓ 完整加密代码已在Github开源（欢迎技术大佬前往验证）</text></view>
+
+
+  <view class="tip-title">✨ 3秒开启安全之旅</view> 
+  <view class="tip-text">
+  <text space="nbsp">点击右下角 ⊕ 按钮，立即添加您的第一条密码记录
+  ➔ 设置一个主密码（重要）
+  ➔ 本地加密至于手机内存
+  ➔ 加密字符串经微信安全通道传输
+
+轻松管理个人密码，一个密码行走于互联网
+</text>
+
+  </view>
+
+  <view class="tip-text"><text>💡 小提示：
+  您设置的主密码，请不要告诉任何人！！！
+  即使是我们工具平台的客服，也不允许哦</text></view>
+
+  <button type="primary" bind:tap="showTips">立即启用</button>
+</view>
+
+<!-- 使用说明按钮 -->
+<button class="add-password-button tips-button" bindtap="showTips">
+  <mp-icon icon="error" color="#fff" size="32"></mp-icon>
+</button>
+
+<!-- 新增按钮 -->
+<button wx:if="{{!isIniting}}" class="add-password-button" bindtap="navigateToAddPassword">
+  <mp-icon icon="add" color="#fff" size="32"></mp-icon>
+</button>
+
+
+<!-- 输入主密码的弹窗 -->
+<view class="modal" wx:if="{{showLoginModal}}" bindtap="toggleLoginModal" data-modal-id="abc">
+  <view class="modal-content" wx:if="{{hasPassword}}">
+    <view>敏感操作，请先验证一次主密码（验证有效期：{{hasCheckedSave?'五天内免登':'下次打开之前'}}）</view>
+    <input type="password" placeholder="请输入主密码" model:value="{{masterPassword}}" />
+    <view class="check-box"> <checkbox model:checked="{{hasCheckedSave}}">五天内不再重复输入主密码</checkbox> </view>
+    <button bindtap="handleLogin">登录</button>
+  </view>
+
+  <view class="modal-content" wx:if="{{!hasPassword}}">
+    <view>添加记录前，需要设置一个主密码（此密码非常重要，不要告诉别人）</view>
+
+    <input type="password"  placeholder="输入您的主密码" model:value="{{masterPassword}}" />
+    <button bindtap="handleSetPassword">设置主密码</button>
+  </view>
+</view>

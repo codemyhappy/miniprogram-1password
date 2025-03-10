@@ -1,0 +1,136 @@
+/* pages/mine/mine.wxss */
+page {
+  background-color: #f5f5f5;
+  padding: 32rpx;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* 颜色定义 */
+:root {
+  --primary-color: #e3f2fd;
+  --secondary-color: #bbdefb;
+  --text-primary: #212121;
+  --text-secondary: #616161;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32rpx;
+}
+
+/* 用户信息卡片 */
+.user-card {
+  background: white;
+  border-radius: 12rpx;
+  padding: 32rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.08);
+}
+
+.avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  margin-right: 32rpx;
+  background-color: var(--primary-color);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8rpx;
+}
+
+.user-id {
+  font-size: 28rpx;
+  color: var(--text-secondary);
+}
+
+/* 分段卡片 */
+.section-card,
+.info-card {
+  background: white;
+  border-radius: 12rpx;
+  padding: 0 32rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.08);
+}
+
+.section-header {
+  padding: 32rpx 0;
+  border-bottom: 2rpx solid #eee;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.section-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32rpx 0;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+
+.section-item:last-child {
+  border-bottom: none;
+}
+
+.item-label {
+  font-size: 30rpx;
+  color: var(--text-primary);
+}
+
+
+/* 信息卡片 */
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 0;
+}
+
+.info-label {
+  font-size: 28rpx;
+  color: var(--text-secondary);
+}
+
+.info-value {
+  font-size: 28rpx;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* 主要按钮 */
+.primary-btn {
+  background: var(--primary-color);
+  color: #1976d2;
+  border-radius: 48rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-top: 48rpx;
+  box-shadow: 0 4rpx 12rpx rgba(25, 118, 210, 0.2);
+  transition: all 0.2s ease;
+}
+
+.primary-btn:active {
+  background: var(--secondary-color);
+  transform: scale(0.98);
+}
+
+.user-info-setting .avatar{
+  width:40rpx !important;
+  height: 40rpx !important;
+  margin:0 !important;
+  vertical-align: bottom;
+}

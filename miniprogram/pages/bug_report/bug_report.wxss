@@ -1,0 +1,39 @@
+.container {
+  padding: 20rpx;
+}
+
+.form-item {
+  position: relative;
+  margin-bottom: 40rpx;
+}
+
+.textarea {
+  width: 100%;
+  height: 300rpx;
+  padding: 20rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+.word-count {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.submit-btn {
+  margin-top: 60rpx;
+  background: #07c160;
+  color: white;
+  border-radius: 8rpx;
+}
+
+.submit-btn[disabled] {
+  background: #ededed;
+  color: #999;
+}

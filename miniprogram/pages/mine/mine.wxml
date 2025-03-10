@@ -1,0 +1,68 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <!-- 用户信息卡片 -->
+  <!-- <view class="user-card">
+    <image class="avatar" src="/images/icons/avatar.png" mode="aspectFill" />
+    <view class="user-info">
+      <text class="username">无需登录</text>
+      <text class="user-id">ID: ******</text>
+    </view>
+  </view> -->
+
+  <!-- 功能分区 -->
+  <view class="section-card">
+    <view class="section-header">
+      <text class="section-title">个人资产</text>
+    </view>
+    <view class="section-item" bind:tap="deving">
+      <text class="item-label">会员</text>
+      <mp-icon icon="arrow" color="#999" size="12"/>
+    </view>
+    <view class="section-item" bind:tap="onClickIntro">
+      <text class="item-label">项目源码</text>
+      <mp-icon icon="arrow" color="#999" size="12"/>
+    </view>
+    <!-- <view class="section-item" bind:tap="deving">
+      <text class="item-label">短信包</text>
+      <mp-icon icon="arrow" color="#999" size="12"/>
+    </view> -->
+  </view>
+  <!-- 功能分区 -->
+  <view class="section-card">
+    <view class="section-header">
+      <text class="section-title">账户设置</text>
+    </view>
+    <view class="section-item" bind:tap="deving">
+      <text class="item-label">主密码修改</text>
+      <mp-icon icon="arrow" color="#999" size="12"/>
+    </view>
+    <view class="section-item" bind:tap="onClickClearCache">
+      <text class="item-label">清空缓存</text>
+      <mp-icon icon="arrow" color="#999" size="12"/>
+    </view>
+    <view class="section-item" bind:tap="onClickBug">
+      <text class="item-label">需求&问题反馈</text>
+      <mp-icon icon="arrow" color="#999" size="12"/>
+    </view>
+  </view>
+
+  
+
+  <!-- 系统信息卡片 -->
+  <view class="info-card">
+    <view class="section-header">
+      <text class="section-title">平台信息</text>
+    </view>
+    <view class="info-item">
+      <text class="info-label">当前版本</text>
+      <text class="info-value">v{{appVersion}}</text>
+    </view>
+    <view class="info-item">
+      <text class="info-label">技术支持</text>
+      <text class="info-value" style="color: rgb(201, 38, 147);font-size: 14px;">小红书@要一直开心啊</text>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <!-- <button class="primary-btn">退出登录</button> -->
+</view>

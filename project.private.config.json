@@ -1,0 +1,42 @@
+{
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "项目介绍",
+          "pathName": "pages/project-intro/project-intro",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/test/test",
+          "pathName": "pages/test/test",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/password-add/password-add",
+          "pathName": "pages/password-add/password-add",
+          "query": "id=1",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "description": "一个基于微信小程序的密码管理工具，主要功能包括：安全的密码存储与管理、基于微信的多平台账号密码备份、主密码保护机制、客户端加密存储、问题反馈与技术支持。本项目完全开源：https://github.com/codemyhappy/miniprogram-1password",
+  "projectname": "miniprogram-1password"
+}
