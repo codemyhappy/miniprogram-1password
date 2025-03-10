@@ -1,4 +1,7 @@
+# 忽略node包
 **/node_modules
+# 忽略环境变量，需替换为用户自己的
+miniprogram/env.js
 
 # Logs
 logs
